@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boutique Lizbeth</title>
+  <!-- Fuente Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Hoja de Estilos externa -->
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <!-- BARRA DE ANUNCIO SUPERIOR -->
+  <div class="top-bar">
+    <span>✨ Envío gratis en todas tus compras mayores a $500 MXN</span>
+    <a href="#contacto">Atención a Clientes</a>
+  </div>
+
+  <!-- HEADER Y NAVEGACIÓN -->
+  <header>
+    <a href="#" class="logo">Bou<span>Tique</span></a>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#productos">Productos (50)</a>
+      <button class="cart-btn-nav" id="open-cart-btn">
+        🛒 Carrito
+        <span class="cart-count" id="cart-count">0</span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="inicio">
+    <div class="hero-content">
+      <span class="hero-badge">NUEVA COLECCIÓN  2026</span>
+      <h1>Elegancia, frescura y tonos únicos</h1>
+      <p>Explora nuestra gama de 50 productos seleccionadospara brindarte una experiencia única.</p>
+      <a href="#productos" class="btn-primary">Ver Catálogo →</a>
+    </div>
+    <div class="hero-card">
+      <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80" alt="Chic & Glow Pastel Collection">
+    </div>
+  </section>
+
+  <!-- CONTROLES Y BÚSQUEDA DEL CATÁLOGO -->
+  <section class="catalog-controls" id="productos">
+    <div class="search-box">
+      <input type="text" id="search-input" placeholder="🔍 Buscar productos...">
+    </div>
+
+    <!-- BOTONES DE FILTRADO POR CATEGORÍA -->
+    <div class="filter-buttons">
+      <button class="filter-btn active" data-filter="all">Todos</button>
+      <button class="filter-btn" data-filter="maquillaje">Maquillaje</button>
+      <button class="filter-btn" data-filter="skincare">Skincare</button>
+      <button class="filter-btn" data-filter="accesorios">Accesorios</button>
+      <button class="filter-btn" data-filter="fragancias">Fragancias</button>
+    </div>
+  </section>
+
+  <!-- CATÁLOGO DE PRODUCTOS -->
+  <section class="catalog">
+    <div class="products-grid" id="products-grid">
+      <!-- Inserción dinámica por JavaScript -->
+    </div>
+
+    <!-- PAGINACIÓN -->
+    <div class="pagination" id="pagination">
+      <!-- Botones de páginas -->
+    </div>
+  </section>
+
+  <!-- MODAL INTERACTIVO MULTI-ÁNGULO DE PRODUCTO -->
+  <div class="modal-overlay" id="product-modal-overlay">
+    <div class="product-modal">
+      <button class="close-modal" id="close-modal-btn">&times;</button>
+      
+      <div class="modal-gallery">
+        <img src="" alt="Vista producto" class="main-view-img" id="modal-main-img">
+        <div class="thumbnails-grid" id="modal-thumbnails">
+          <!-- Miniaturas dinámicas -->
+        </div>
+      </div>
+
+      <div class="modal-info">
+        <span class="modal-category" id="modal-category">Categoría</span>
+        <h2 class="modal-title" id="modal-title">Nombre del Producto</h2>
+        <div class="modal-price" id="modal-price">$0 MXN</div>
+        <p class="modal-desc" id="modal-desc">Descripción detallada del producto con ingredientes, acabados e instrucciones de uso.</p>
+        <button class="btn-primary" id="modal-add-cart-btn">Agregar al Carrito 🛍️</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CARRITO DE COMPRAS DESLIZANTE -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-modal" id="cart-modal">
+    <div class="cart-header">
+      <h3>Tu Carrito ✨</h3>
+      <button class="close-modal" id="close-cart-btn">&times;</button>
+    </div>
+    <div class="cart-items" id="cart-items">
+      <p style="text-align: center; color: var(--text-muted); margin-top: 40px;">Tu carrito está vacío 🌸</p>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total:</span>
+        <span id="cart-total-price">$0.00</span>
+      </div>
+      <button class="btn-checkout" onclick="alert('✨ ¡Gracias por tu compra en Boutique Lizbeth!')">Finalizar Pedido</button>
+    </div>
+  </aside>
+
+  <!-- FOOTER -->
+  <footer>
+    <p><strong>Chic & Glow Pastel Edition</strong> &copy; 2026 - Catálogo de 50 Productos Interactivos.</p>
+    <p style="margin-top: 5px; color: var(--purple-accent);">Diseñado con tonalidades rosa pastel y morado lavanda 💕</p>
+  </footer>
+
+  <!-- Script interactivo externo -->
+  <script src="script.js"></script>
+</body>
+</html>
